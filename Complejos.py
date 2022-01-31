@@ -21,11 +21,20 @@ def modulocplx(a):
 def conjugadocplx(a):
     return (a[0], (-1*a[1]))
 
+def fasecplx(a):
+    return math.atan(a[1]/a[0])
+
+def cartetopolarcplx(a,b):
+    return (modulocplx((a,b)), fasecplx((a,b)))
+
+def polartocartecplx(a,b):
+    return (a * math.cos(b) , a * math.sin(b))
+
 def prettyprinting(c):
     if c[1] > 0:
         print(str(c[0]) + " + " + str(c[1]) + "i")
     else:
-        print(str(c[0]) + " " + str(c[1]) + "i")
+        print(str(c[0]) + str(c[1]) + " i")
 
 
 #if __name__ == '__main__':
@@ -34,3 +43,7 @@ prettyprinting(multcplx((2,3), (4,7)))
 prettyprinting(divcplx((2,3), (4,7)))
 print(modulocplx((2,3)))
 prettyprinting(conjugadocplx((2,3)))
+print(fasecplx((2,3)))
+prettyprinting(polartocartecplx(5.39, 0.38))
+prettyprinting(cartetopolarcplx(5,2))
+
