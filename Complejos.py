@@ -22,7 +22,21 @@ def conjugadocplx(a):
     return (a[0], (-1*a[1]))
 
 def fasecplx(a):
-    return math.atan(a[1]/a[0])
+    if a[0] == 0 and a[1] == 0:
+        return 0
+    if a[0] == 0 and a[1] > 0:
+        return math.pi
+    if a[0] ==0 and a[1] <0:
+        return 3 * math.pi/2
+    angulo = math.atan(a[1]/a[0])
+    if a[0]>0 and a[1]>=0:
+        return angulo
+    if a[0]<0 and a[1]>0:
+        return abs(angulo) + math.pi/2
+    if a[0]<0 and a[1]<=0:
+        return abs(angulo) + math.pi
+    if a[0]>0 and a[1]<0:
+        return abs(angulo) + 3 * math.pi/2
 
 def cartetopolarcplx(a,b):
     return (modulocplx((a,b)), fasecplx((a,b)))
@@ -36,8 +50,9 @@ def prettyprinting(c):
     else:
         print(str(c[0]) + str(c[1]) + " i")
 
+def printpolar(c):
+    print(str(c[0]) + "e^" + str(c[1]) + "i")
 
-#if __name__ == '__main__':
 prettyprinting(sumacplx((2,3), (4,7)))
 prettyprinting(multcplx((2,3), (4,7)))
 prettyprinting(divcplx((2,3), (4,7)))
@@ -45,5 +60,5 @@ print(modulocplx((2,3)))
 prettyprinting(conjugadocplx((2,3)))
 print(fasecplx((2,3)))
 prettyprinting(polartocartecplx(5.39, 0.38))
-prettyprinting(cartetopolarcplx(5,2))
+printpolar(cartetopolarcplx(5,2))
 
