@@ -48,17 +48,17 @@ def prettyprinting(c):
     if c[1] > 0:
         print(str(c[0]) + " + " + str(c[1]) + "i")
     else:
-        print(str(c[0]) + str(c[1]) + " i")
+        print(str(c[0]) + " " + str(c[1]) + "i")
 
 def printpolar(c):
     print(str(c[0]) + "e^" + str(c[1]) + "i")
 
-prettyprinting(sumacplx((2,3), (4,7)))
-prettyprinting(multcplx((2,3), (4,7)))
-prettyprinting(divcplx((2,3), (4,7)))
-print(modulocplx((2,3)))
-prettyprinting(conjugadocplx((2,3)))
-print(fasecplx((2,3)))
-prettyprinting(polartocartecplx(5.39, 0.38))
-printpolar(cartetopolarcplx(5,2))
+#prettyprinting(sumacplx((2,3), (4,7)))
+#prettyprinting(multcplx((2,3), (4,7)))
+#prettyprinting(divcplx((2,3), (4,7)))
+#print(modulocplx((2,3)))
+#prettyprinting(conjugadocplx((2,3)))
+#print(fasecplx((2,3)))
+#prettyprinting(polartocartecplx(5.39, 0.38))
+#printpolar(cartetopolarcplx(5,2))
 
