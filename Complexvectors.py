@@ -94,10 +94,10 @@ def productomatrices(A, B):
     matriz = []
     for i in range(filas):
         fila = []
-        for j in range(columnas):
+        for j in range(filas):
             suma = (0,0)
-            for k in range(filas):
-                suma = lc.sumacplx(suma, lc.multcplx(A[i][j], B[j][k]))
+            for k in range(columnas):
+                suma = lc.sumacplx(suma, lc.multcplx(A[i][k], B[k][j]))
             fila += [changeprintcomplex(suma)]
         matriz += [fila]
     return matriz
