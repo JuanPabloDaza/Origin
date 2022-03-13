@@ -16,10 +16,10 @@ def divcplx(a, b):
     return (real, img)
 
 def modulocplx(a):
-    return math.sqrt((a[0])^2 + (a[1])^2)
+    return math.sqrt((a[0])**2 + (a[1])**2)
 
 def conjugadocplx(a):
-    return (a[0], (-1*a[1]))
+    return (a[0], -1*a[1])
 
 def fasecplx(a):
     if a[0] == 0 and a[1] == 0:
