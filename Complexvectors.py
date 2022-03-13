@@ -1,4 +1,5 @@
 import math
+from tkinter import W
 import Complejos as lc
 
 def changeprintcomplex(c):
@@ -117,8 +118,9 @@ def productointerno(A, B):
         
 #13
 def normavector(v):
-    resp = productointerno(v,v)
-    return math.sqrt(resp[0])
+    w = [a[:] for a in v]
+    resp = productointerno(v,w)
+    return math.sqrt((resp[0]**2) + (resp[1]**2))
     
 #14
 def distanciavectores(A, B):
@@ -180,6 +182,10 @@ def matrizhermitiana(A):
     return "Es hermitiana"
 
 def main():
+    p = [[(0,1)]]
+    q = [[(-7,-6)]]
+    print(productointerno(q,p))
+
     v = [[(5,3)], [(8,2)]]
     w = [[(3,4)], [(9,3)]]
     print("---------------Suma vectores---------------")
