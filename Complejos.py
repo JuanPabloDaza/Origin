@@ -11,8 +11,8 @@ def multcplx(a, b):
     return (real, img)
 
 def divcplx(a, b):
-    real = ((a[0] * b[0]) + (a[1] * b[1]))/((b[0]^2) + (b[1]^2))
-    img = ((b[0] * a[1])-(a[0] * b[1]))/((b[0]^2) + (b[1]^2))
+    real = ((a[0] * b[0]) + (a[1] * b[1]))/((b[0]**2) + (b[1]**2))
+    img = ((b[0] * a[1])-(a[0] * b[1]))/((b[0]**2) + (b[1]**2))
     return (real, img)
 
 def modulocplx(a):
